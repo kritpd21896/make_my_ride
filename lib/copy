@@ -1,0 +1,35 @@
+import 'package:flutter/material.dart';
+import 'package:ui_mmr/account.dart';
+import 'package:ui_mmr/drawer.dart';
+import 'package:ui_mmr/help.dart';
+
+void main() {
+  runApp(MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark(),
+      home: HomePage(),
+      // routes: {"My Account": (BuildContext context) => MyAccount('My Account')},
+    );
+  }
+}
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Make My Ride'),
+      ),
+      drawer: Drawer(
+        child: MyDrawer(),
+      ),
+        
+      
+    );
+  }
+}
