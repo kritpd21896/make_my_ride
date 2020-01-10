@@ -6,7 +6,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      
+        child: Container(
       child: ListView(
         children: <Widget>[
           UserAccountsDrawerHeader(
@@ -31,7 +31,9 @@ class MyDrawer extends StatelessWidget {
             trailing: Icon(Icons.verified_user),
             onTap: null,
           ),
-          Divider(),
+          Divider(
+            color: Colors.black54,
+          ),
           ListTile(
             title: Text('My Rides'),
             trailing: Icon(Icons.directions_bike),
@@ -46,9 +48,11 @@ class MyDrawer extends StatelessWidget {
                   builder: (BuildContext context) => Help("Help")));
             },
           ),
-          Divider()
+          Divider(
+            color: Colors.black54,
+          )
         ],
       ),
-    );
+    ));
   }
 }
