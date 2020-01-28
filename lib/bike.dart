@@ -38,21 +38,21 @@ class _MyBikePageState extends State<MyBikePage> {
                   ],
                 )),
                 Container(
-                  padding:EdgeInsets.fromLTRB(SizeConfig.blockSizeHorizontal*5,SizeConfig.blockSizeVertical*2,SizeConfig.blockSizeHorizontal*5,SizeConfig.blockSizeVertical*1),
+                  padding:EdgeInsets.fromLTRB(SizeConfig.widthMultiplier*5,SizeConfig.heightMultiplier*2,SizeConfig.widthMultiplier*5,SizeConfig.heightMultiplier*1),
                child: DateWidget(),
                 ),
             Padding(
-              padding: EdgeInsets.fromLTRB(SizeConfig.blockSizeHorizontal*5, SizeConfig.blockSizeVertical*1, 0.0, SizeConfig.blockSizeVertical*1),
+              padding: EdgeInsets.fromLTRB(SizeConfig.widthMultiplier*5, SizeConfig.heightMultiplier*1, 0.0, SizeConfig.heightMultiplier*1),
               child: Text(
                 'Royal Enfield',
                 style: TextStyle(
-                    color: Colors.white, fontFamily: 'Future', fontSize:SizeConfig.safeBlockHorizontal*5),
+                    color: Colors.white, fontFamily: 'Future', fontSize:SizeConfig.widthMultiplier*5),
               ),
             ),
             Container(
-             height: SizeConfig.blockSizeVertical*35, 
+             height: SizeConfig.heightMultiplier*35, 
              
-              padding: EdgeInsets.only(left: SizeConfig.blockSizeHorizontal*5,right: SizeConfig.blockSizeHorizontal*5),
+              padding: EdgeInsets.only(left: SizeConfig.widthMultiplier*5,right: SizeConfig.widthMultiplier*5),
               child: ListView(
                 scrollDirection: Axis.horizontal,
                 children: <Widget>[

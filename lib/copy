@@ -1,14 +1,35 @@
-Icon(Icons.calendar_today,color: Colors.white,),
-                    Text("Click to select pickup date",style: TextStyle(color: Colors.white),)
+ Container(
+           height: 260.0, 
+           width: 300.0,
+            padding: EdgeInsets.only(left: 20.0,right: 10.0),
+            child: ListView(
+              scrollDirection: Axis.horizontal,
+              children: <Widget>[
+               Container(
+                 child: BikeCard("assets/images/Scooty/zestYellow.jpg","TVS Zest Yellow"),
+                
+               ),
+               Container(
+                 child: BikeCard("assets/images/Scooty/ntorqGrey.jpg","TVS Ntorq Grey"),
 
+               ),
+               Container(
+                 child: BikeCard("assets/images/Scooty/ntorqBlue.jpg","TVS Ntorq Blue"),
 
+               ),
+               Container(
+                 child: BikeCard("assets/images/Scooty/apriliaWhite.jpg","Aprilia White"),
 
+               ),
+               Container(
+                 child: BikeCard("assets/images/Scooty/apriliaGreen.jpg","Aprilia Green"),
 
-                    children: <Widget>[
-                    Icon(Icons.calendar_today,color: Colors.white,),
-                    Text("Click to select pickup date",style: TextStyle(color: Colors.white),)
+               ),
+               Container(
+                 child: BikeCard("assets/images/Scooty/apriliaBlack.jpg","Aprilia Black"),
 
-
-
-                    Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) => MyBikePage()));
+               ),
+               
+              ],
+            ),
+          )

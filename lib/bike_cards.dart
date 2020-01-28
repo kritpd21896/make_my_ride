@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:ui_mmr/size_config.dart';
+import 'package:ui_mmr/confirmation_page.dart';
 
 
 class BikeCard extends StatelessWidget {
@@ -12,8 +13,8 @@ class BikeCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       
-      width: SizeConfig.blockSizeHorizontal*70,
-      padding: EdgeInsets.all(SizeConfig.blockSizeHorizontal*2),
+      width: SizeConfig.widthMultiplier*70,
+      padding: EdgeInsets.all(SizeConfig.widthMultiplier*2),
     
      child: Card(
        
@@ -30,9 +31,16 @@ class BikeCard extends StatelessWidget {
                    
                   
                    Padding(
-                     padding: EdgeInsets.all(SizeConfig.blockSizeHorizontal*2),
+                     padding: EdgeInsets.all(SizeConfig.widthMultiplier*2),
                      child: Icon(Icons.favorite_border)),
-
+                    GestureDetector(
+                      onTap:() {Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => ConfirmationPage(src,title)));},
+                                          child: Padding(
+                        padding: EdgeInsets.only(left: SizeConfig.widthMultiplier*56,top: SizeConfig.widthMultiplier*2),
+                        child: Icon(Icons.add),
+                      ),
+                    )
 
                 
 
@@ -43,10 +51,10 @@ class BikeCard extends StatelessWidget {
        
                 Container(
                        
-            color: Colors.grey,
-            padding: EdgeInsets.all(SizeConfig.blockSizeHorizontal*2),
+            
+            padding: EdgeInsets.all(SizeConfig.widthMultiplier*2),
             child: ListTile(
-              contentPadding: EdgeInsets.all(SizeConfig.blockSizeHorizontal*1),
+              contentPadding: EdgeInsets.all(SizeConfig.widthMultiplier*1),
             
               trailing: Text("899/Day"),
               title: Text(title,style: TextStyle(color: Colors.black,),),
